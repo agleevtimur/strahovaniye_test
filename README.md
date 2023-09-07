@@ -1,0 +1,1 @@
+# strahovaniye_test
