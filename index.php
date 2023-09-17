@@ -7,7 +7,8 @@ spl_autoload_register(function ($className) {
     include __DIR__ . '/' . str_replace('\\', '/', $className) . '.php';
 });
 
-$transportDTOList = (new TransportCSVFileParser())->parse('test.csv');
+$env = parse_ini_file('.env');
+$transportDTOList = (new TransportCSVFileParser())->parse($env['SOURCE_CSV_FILE']);
 $transportList = (new TransportFactory())->createAllTransport($transportDTOList);
 
 foreach ($transportList as $transport) {
