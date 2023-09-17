@@ -42,7 +42,7 @@ class TransportCSVFileFactory extends TransportFileFactoryBase
     public function createTruck(array $data): Truck
     {
         $parameters = explode('x', $data[4]);
-        if ($parameters == [""]) {
+        if ($parameters === [""]) {
             return new Truck($data[1], $data[3], (float)$data[5], 0, 0, 0);
         }
 
