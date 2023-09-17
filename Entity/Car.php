@@ -2,9 +2,11 @@
 
 namespace Entity;
 
+use TransportEnum;
+
 class Car extends TransportBase
 {
-    protected static string $transportType = TRANSPORT_TYPE_CAR;
+    protected static string $transportType = TransportEnum::TYPE_CAR;
     private int $passengerSeatsCount;
 
 

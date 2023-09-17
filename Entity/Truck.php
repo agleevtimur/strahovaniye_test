@@ -2,9 +2,11 @@
 
 namespace Entity;
 
+use TransportEnum;
+
 class Truck extends TransportBase
 {
-    protected static string $transportType = TRANSPORT_TYPE_TRUCK;
+    protected static string $transportType = TransportEnum::TYPE_TRUCK;
     public int $bodyWidth;
     public int $bodyHeight;
     public int $bodyLength;

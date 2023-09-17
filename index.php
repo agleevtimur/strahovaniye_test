@@ -3,7 +3,6 @@
 use Factory\TransportFactory;
 use Service\TransportCSVFileParser;
 
-include 'transport_types.php';
 spl_autoload_register(function ($className) {
     include __DIR__ . '/' . str_replace('\\', '/', $className) . '.php';
 });

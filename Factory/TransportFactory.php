@@ -6,6 +6,7 @@ use DTO\TransportDTO;
 use Entity\Car;
 use Entity\SpecMachine;
 use Entity\Truck;
+use TransportEnum;
 
 class TransportFactory implements TransportFactoryInterface
 {
@@ -21,13 +22,13 @@ class TransportFactory implements TransportFactoryInterface
         /** @var TransportDTO $dto */
         foreach ($transportDTOList as $transportDTO) {
             switch ($transportDTO->type) {
-                case TRANSPORT_TYPE_CAR:
+                case TransportEnum::TYPE_CAR:
                     $transportList[] = $this->createCar($transportDTO);
                     break;
-                case TRANSPORT_TYPE_TRUCK:
+                case TransportEnum::TYPE_TRUCK:
                     $transportList[] = $this->createTruck($transportDTO);
                     break;
-                case TRANSPORT_TYPE_SPEC_MACHINE:
+                case TransportEnum::TYPE_SPEC_MACHINE:
                     $transportList[] = $this->createSpecMachine($transportDTO);
             }
         }

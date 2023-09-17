@@ -2,6 +2,8 @@
 
 namespace Entity;
 
+use TransportEnum;
+
 class SpecMachine extends TransportBase
 {
     /**
@@ -9,7 +11,7 @@ class SpecMachine extends TransportBase
      * @var string
      */
     private string $extra;
-    protected static string $transportType = TRANSPORT_TYPE_SPEC_MACHINE;
+    protected static string $transportType = TransportEnum::TYPE_SPEC_MACHINE;
     public function __construct(string $brand, string $photoFileName, float $carrying, string $extra)
     {
         parent::__construct($brand, $photoFileName, $carrying);
