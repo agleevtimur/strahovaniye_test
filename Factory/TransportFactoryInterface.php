@@ -2,15 +2,16 @@
 
 namespace Factory;
 
+use DTO\TransportDTO;
 use Entity\Car;
 use Entity\SpecMachine;
 use Entity\Truck;
 
 interface TransportFactoryInterface
 {
-    function createCar(array $data): Car;
+    function createCar(TransportDTO $transportDTO): Car;
 
-    function createTruck(array $data): Truck;
+    function createTruck(TransportDTO $transportDTO): Truck;
 
-    function createSpecMachine(array $data): SpecMachine;
+    function createSpecMachine(TransportDTO $transportDTO): SpecMachine;
 }

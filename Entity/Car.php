@@ -14,12 +14,13 @@ class Car extends TransportBase
         $this -> passengerSeatsCount = $passengerSeatsCount;
     }
 
-    public function getPassengerSeatsCount(): int {
+    public function getPassengerSeatsCount(): int
+    {
         return $this->passengerSeatsCount;
     }
 
     public function __toString()
     {
-        return $this->toString((string)$this->passengerSeatsCount, "", "");
+        return $this->toString((string) $this->passengerSeatsCount, "", "");
     }
 }
