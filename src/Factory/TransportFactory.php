@@ -49,9 +49,9 @@ class TransportFactory implements TransportFactoryInterface
             $transportDTO->brand,
             $transportDTO->photoFileName,
             $transportDTO->carrying,
-            (int) $parameters[0] ?? 0,
-            (int) $parameters[1] ?? 0,
-            (int) $parameters[2] ?? 0
+            (int) ($parameters[0] ?? 0),
+            (int) ($parameters[1] ?? 0),
+            (int) ($parameters[2] ?? 0)
         );
     }
 
